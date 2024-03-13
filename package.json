@@ -1,0 +1,19 @@
+{
+  "name": "touhoubadapplediscord",
+  "version": "1.0.0",
+  "description": "Play Badapple in discord text channel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "dd"
+  },
+  "author": "DanielBUBU",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "image-to-ascii": "^3.2.0"
+  }
+}
