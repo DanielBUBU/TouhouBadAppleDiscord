@@ -1,6 +1,6 @@
 {
   "name": "touhoubadapplediscord",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Play Badapple in discord text channel",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,7 @@
   "author": "DanielBUBU",
   "license": "UNLICENSED",
   "dependencies": {
-    "discord.js": "^14.14.1",
-    "image-to-ascii": "^3.2.0"
+    "ascii-converter": "^1.1.5",
+    "discord.js": "^14.14.1"
   }
 }

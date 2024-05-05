@@ -5,7 +5,7 @@ const {
     token
 } = require(path.join(process.cwd(), './config.json'));
 const { Message } = require('discord.js');
-const imageToAscii = require("image-to-ascii");
+const convertToASCII = require('ascii-converter').default;
 const zeroPad = (num, places) => String(num).padStart(places, '0');
 const MAXFRAME = 6572
 
@@ -51,13 +51,15 @@ async function BA(args, pixels) {
                         var filePath = "./frames/BadApple" +
                             frameNum + ".png";
                         var content = frameNum + "Frame\n";
-                        var contentSent = false;
-                        imageToAscii(filePath.toString(),
+                        convertToASCII(
+                            filePath.toString(),
                             {
-                                colored: false,
-                                pixels: pixels
-                            },
-                            (err, converted) => {
+                                width: 24,
+                                height:13,
+                                grayScale: pixels
+                            }
+                        ).then(
+                            (converted) => {
                                 content += converted;
                                 //console.log(err);
                                 msg.edit(content)
